@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
     AudioSource audioSource;
 
-    bool isAlive;
 
     private void Start()
     {

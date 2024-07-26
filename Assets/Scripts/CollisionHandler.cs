@@ -11,36 +11,43 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
 
-    AudioSource AudioSource;
+    AudioSource audioSource;
+
+    bool isTransitioning = false;
 
     private void Start()
     {
-            AudioSource = GetComponent<AudioSource>();
+            audioSource = GetComponent<AudioSource>();
     }
 
 
     void OnCollisionEnter(Collision collision)
     {
-        switch (collision.gameObject.tag)
+        if (isTransitioning == false)
         {
-            case "Friendly":
-                Debug.Log("this thing is frienly");
-                break;
-            case "Finish":
-                StartSuccessSequence();
-                break;
-            case "Fuel":
-                Debug.Log("You picked up fuel");
-                break;
-            case "Crash":
-                StartCrashSequence();
-                break; 
+            switch (collision.gameObject.tag)
+            {
+                case "Friendly":
+                    Debug.Log("this thing is frienly");
+                    break;
+                case "Finish":
+                    StartSuccessSequence();
+                    break;
+                case "Fuel":
+                    Debug.Log("You picked up fuel");
+                    break;
+                case "Crash":
+                    StartCrashSequence();
+                    break;
+            }
         }
     }
 
     void StartSuccessSequence()
     {
-        AudioSource.PlayOneShot(success);
+        isTransitioning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("NextLevel", levelLoadDelay);
 
@@ -48,7 +55,9 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
-        AudioSource.PlayOneShot(crash);
+        isTransitioning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
     }
