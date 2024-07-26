@@ -8,7 +8,18 @@ public class CollisionHandler : MonoBehaviour
 {
 
     [SerializeField] float levelLoadDelay = 1f;
-     void OnCollisionEnter(Collision collision)
+    [SerializeField] AudioClip success;
+    [SerializeField] AudioClip crash;
+
+    AudioSource AudioSource;
+
+    private void Start()
+    {
+            AudioSource = GetComponent<AudioSource>();
+    }
+
+
+    void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
         {
@@ -21,14 +32,15 @@ public class CollisionHandler : MonoBehaviour
             case "Fuel":
                 Debug.Log("You picked up fuel");
                 break;
-            default:
+            case "Crash":
                 StartCrashSequence();
-                break;  
+                break; 
         }
     }
 
     void StartSuccessSequence()
     {
+        AudioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("NextLevel", levelLoadDelay);
 
@@ -36,6 +48,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        AudioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
     }

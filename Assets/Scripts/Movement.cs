@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody rb;
+    
     [SerializeField] float mainThrust;
     [SerializeField] float mainRotation;
+    [SerializeField] AudioClip mainEngine;
+    
+
+    Rigidbody rb;
     AudioSource audioSource;
+
+    bool isAlive;
 
     private void Start()
     {
@@ -30,7 +36,7 @@ public class Movement : MonoBehaviour
 
             if(!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
 
             }
         }
