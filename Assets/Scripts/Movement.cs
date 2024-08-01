@@ -35,51 +35,77 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            
-
-            if(!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-
-            }
-            if(!mainParticles.isPlaying)
-            {
-                mainParticles.Play();
-            }
+            StartThrusting();
         }
         else
         {
-            audioSource.Stop();
-            mainParticles.Stop();
+            StopThrusting();
         }
+    }
+
+
+    void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+
+
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+
+        }
+        if (!mainParticles.isPlaying)
+        {
+            mainParticles.Play();
+        }
+    }
+
+    void StopThrusting()
+    {
+        audioSource.Stop();
+        mainParticles.Stop();
     }
 
     void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(mainRotation);
-
-            if (!rightSideParticles.isPlaying)
-            {
-                rightSideParticles.Play();
-            }
+            RotateLeft();
         }
 
         else if(Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-mainRotation);
-
-            if (!leftSideParticles.isPlaying)
-            {
-                leftSideParticles.Play();
-            }
+            RotateRight();
         }
         else
         {
-            leftSideParticles.Stop();
-            rightSideParticles.Stop();
+            StopRotation();
+        }
+    }
+
+    void StopRotation()
+    {
+        leftSideParticles.Stop();
+        rightSideParticles.Stop();
+    }
+
+     void RotateRight()
+    {
+        ApplyRotation(-mainRotation);
+
+        if (!leftSideParticles.isPlaying)
+        {
+            leftSideParticles.Play();
+        }
+    }
+
+     void RotateLeft()
+    {
+        ApplyRotation(mainRotation);
+
+        if (!rightSideParticles.isPlaying)
+        {
+            rightSideParticles.Play();
         }
     }
 

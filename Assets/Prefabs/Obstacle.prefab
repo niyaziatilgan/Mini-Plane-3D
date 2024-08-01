@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5146213241130012787}
   - component: {fileID: 5146213241130012784}
   - component: {fileID: 5146213241130012785}
+  - component: {fileID: 4377926774236774901}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Crash
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5146213241130012798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.54, z: 0}
-  m_LocalScale: {x: 5.437663, y: 6.446734, z: 6.3316}
+  m_LocalScale: {x: 2.9878871, y: 4.5716896, z: 5.8221645}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c679fc846e2fa64e8b293f5961e0b71, type: 2}
+  - {fileID: 2100000, guid: a192d166426671547867fdf0f1e6a200, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4377926774236774901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146213241130012798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db9a831e25bdc4d8eea737bd32d29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVec: {x: 8, y: 0, z: 0}
+  movementFac: 0
