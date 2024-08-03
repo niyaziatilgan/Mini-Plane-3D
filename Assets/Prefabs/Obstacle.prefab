@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVec: {x: 8, y: 0, z: 0}
-  movementFac: 0
+  period: 2

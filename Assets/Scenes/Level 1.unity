@@ -190,7 +190,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &168651471 stripped
 Transform:
@@ -460,7 +461,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &237829531 stripped
 Transform:
@@ -534,7 +536,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &340650584 stripped
 Transform:
@@ -796,7 +799,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &747094858 stripped
 Transform:
@@ -870,7 +874,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &786158782 stripped
 Transform:
@@ -1028,7 +1033,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &1020577254 stripped
 Transform:
@@ -1102,7 +1108,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &1077445543 stripped
 Transform:
@@ -1176,7 +1183,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!1 &1501530432
 GameObject:
@@ -1393,7 +1401,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4377926774236774901, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7674ae814e6cfb4e9cf4ebfe0d3ef8b, type: 3}
 --- !u!4 &1861833074 stripped
 Transform:
